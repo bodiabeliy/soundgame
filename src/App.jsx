@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import MindARViewer from './mindar-viewer';
-import Banner from './components/banners/Banner.tsx';
+import MindARViewer from './mindar-viewer.jsx';
+import Banner from './components/CategoriesTopicsList/CategoriesTopicsList.jsx';
+
+import AppRouter from './utils/routes/index.jsx';
 function App() {
   const [started, setStarted] = useState(null);
 
@@ -16,12 +18,11 @@ function App() {
       {started === 'aframe' && (
         <div className="container">
           <MindARViewer/>
-          <video></video>
         </div>
       )}
 
         <div className=" lg:w-[1300px] lg:flex lg:justify-center flex-col m-auto">
-        <Banner />
+         <AppRouter />
       </div>
     </div>
   );
