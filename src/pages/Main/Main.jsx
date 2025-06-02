@@ -4,7 +4,7 @@ import CategoriesTopicsList from "./../../components/CategoriesTopicsList/Catego
 const Main = () => {
     return (
         <>
-         <h1>Main Page</h1>
+         {/* <h1>Main Page</h1> */}
          <CategoriesTopicsList />
         </>
     )
