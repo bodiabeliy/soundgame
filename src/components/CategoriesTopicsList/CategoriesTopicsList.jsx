@@ -9,7 +9,9 @@ import DocumentScannerOutlinedIcon from "@mui/icons-material/DocumentScannerOutl
 import { IconArrowCard } from "../Icons/ExpendArrow";
 import { Warning } from "../Icons/Warning";
 
+//  mock
 import photoTemplate from "../../assets/animals_template.png";
+import toolTemplate from "../../assets/tools.png";
 
 import { categoryTopicsList } from "../../utils/db";
 
@@ -79,7 +81,7 @@ const CategoriesTopicsList = () => {
                       <div className="flex flex-col-reverse">
                          <div className="mt-2">
                         <p className="pb-1">Зразок:</p>
-                        <img src={photoTemplate} alt="" />
+                        <img src={categotyTopic.userExample} alt="" />
                       </div>
                         <span className="font-medium">
                          Перед початком - переконайтесь, що отримали потрібну роздруківку у вчителя. 

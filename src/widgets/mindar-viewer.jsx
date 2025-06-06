@@ -35,7 +35,7 @@ const MindARViewer = (props) => {
     <>
     {
       <>
-        <a-scene ref={sceneRef} mindar-image={`imageTargetSrc: ${imageTargetTemplate}; autoStart: false`} color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <a-scene ref={sceneRef} mindar-image={`imageTargetSrc: ${imageTargetTemplate}; autoStart: false; `} color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
           <a-assets>
             {
               children_AR_list.map((item, index) => {

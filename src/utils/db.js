@@ -3,9 +3,8 @@ export const categoryTopicsList =[
     {
         image:`${process.env.REACT_APP_BASE_URL}/wild%20nature/topicImage.jpg`,
         imageTemplate:`${process.env.REACT_APP_BASE_URL}/wild%20nature/wild_nature.mind`,
-
+        userExample:`${process.env.REACT_APP_BASE_URL}/wild%20nature/animals_template.png`,
         topicName:"Дика природа",
-
         topicItems:[
             {
                 parentTopic: "Дика природа",
@@ -44,16 +43,36 @@ export const categoryTopicsList =[
         ]
     },
     {
-        image:"",
-        imageTemplate:``,
-        topicName:"Robert",
+        image:`${process.env.REACT_APP_BASE_URL}/tools/toolsTopic.png`,
+        imageTemplate:`${process.env.REACT_APP_BASE_URL}/tools/tools.mind`,
+        userExample:`${process.env.REACT_APP_BASE_URL}/tools/toolsTopic.png`,
+        topicName:"Інструменти",
         topicItems:[
+            {
+                parentTopic: "Інструменти",
+                itemName: "drill",
+                targetIndex: 0,
+                audio: `${process.env.REACT_APP_BASE_URL}/tools/drill/drill.mp3`,
+            },
+            {
+                parentTopic: "Інструменти",
+                itemName: "hummer",
+                targetIndex: 1,
+                audio: `${process.env.REACT_APP_BASE_URL}/tools/hummer/hummer.mp3`,
+            },
+             {
+                parentTopic: "Інструменти",
+                itemName: "jackhummer",
+                targetIndex: 3,
+                audio: `${process.env.REACT_APP_BASE_URL}/tools/jackhummer/jackhummer.mp3`,
+            }
           
         ]
     },
     {
         image:"",
         imageTemplate:``,
+        userExample:``,
         topicName:"Bonnie Green",
         topicItems:[]
         
@@ -61,6 +80,7 @@ export const categoryTopicsList =[
     {
         image:"",
         imageTemplate:``,
+        userExample:``,
         topicName:"Michael Gough",
         topicItems:[]
 
