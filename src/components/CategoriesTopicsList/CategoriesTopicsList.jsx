@@ -70,18 +70,18 @@ const CategoriesTopicsList = () => {
                   <AccordionDetails className="text-xl text-white bg-green-light">
                   <div className="">
                     <div
-                      class="flex items-center p-4 mb-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50"
+                      className="flex items-center p-4 mb-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50"
                       role="alert"
                     >
                       <Warning fill="currentColor" />
                      
-                      <span class="sr-only">Info</span>
+                      <span className="sr-only">Info</span>
                       <div className="flex flex-col-reverse">
                          <div className="mt-2">
                         <p className="pb-1">Зразок:</p>
                         <img src={photoTemplate} alt="" />
                       </div>
-                        <span class="font-medium">
+                        <span className="font-medium">
                          Перед початком - переконайтесь, що отримали потрібну роздруківку у вчителя. 
                         У разі відсутності - завантажте потрібну
                         </span> <br />
@@ -95,14 +95,14 @@ const CategoriesTopicsList = () => {
                   <div className="flex items-center justify-center space-x-4 rtl:space-x-reverse mb-2">
                     <button
                       type="button"
-                      class="text-white bg-pink hover:bg-hovered-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 me-2 mt-2"
+                      className="text-white bg-pink hover:bg-hovered-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 me-2 mt-2"
                     >
                       <FileDownloadIcon />
                       Завантажити
                     </button>
                     <button
                       type="button"
-                      class="text-white bg-purpure hover:bg-hovered-purpure font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mt-2"
+                      className="text-white bg-purpure hover:bg-hovered-purpure font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mt-2"
                       onClick={() =>
                         navigate(`/topic/${categotyTopic.topicName}`, {
                           state: {
