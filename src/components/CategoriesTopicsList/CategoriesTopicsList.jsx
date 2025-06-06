@@ -8,7 +8,8 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import DocumentScannerOutlinedIcon from "@mui/icons-material/DocumentScannerOutlined";
 import { IconArrowCard } from "../Icons/ExpendArrow";
 import { Warning } from "../Icons/Warning";
-import { Empty } from "../Icons/Empty";
+
+import photoTemplate from "../../assets/animals_template.png";
 
 import { categoryTopicsList } from "../../utils/db";
 
@@ -76,13 +77,19 @@ const CategoriesTopicsList = () => {
                      
                       <span class="sr-only">Info</span>
                       <div className="flex flex-col-reverse">
+                         <div className="mt-2">
+                        <p className="pb-1">Зразок:</p>
+                        <img src={photoTemplate} alt="" />
+                      </div>
                         <span class="font-medium">
                          Перед початком - переконайтесь, що отримали потрібну роздруківку у вчителя. 
                         У разі відсутності - завантажте потрібну
                         </span> <br />
 
                         Хвилинка уваги!
+                        
                       </div>
+                     
                     </div>
                   </div>
                   <div className="flex items-center justify-center space-x-4 rtl:space-x-reverse mb-2">

@@ -5,3 +5,14 @@
 .css-1086bdv-MuiPaper-root-MuiAccordion-root {
   background-color:#00bba8 !important;
 }
+
+video {
+  position: absolute;
+  width: 100vw !important;
+  height: calc(100vh - 50px) !important;
+  object-fit: cover !important;
+
+  top: 50px !important;
+
+
+}

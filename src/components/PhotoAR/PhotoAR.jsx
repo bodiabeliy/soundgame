@@ -1,23 +1,57 @@
-const PhotoAR = () => {
-  return (
-    <>
-      <a
-        href="#"
-        className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-      >
-       
-        <div className="flex flex-col justify-between p-4 leading-normal">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-        </div>
-      </a>
-    </>
-  );
-};
+import React, { useEffect, useRef } from 'react';
+    // Image target component
+    const PhotoAR = ({ id, imageUrl, soundUrl }) => {
+      console.log("soundUrl", soundUrl);
+      
+      const sceneRef = useRef();
 
-export default PhotoAR;
+      useEffect(() => {
+    const sceneEl = sceneRef?.current;
+    const arSystem = sceneEl?.systems?.["mindar-image-system"];
+    
+    const entity = document.querySelector('a-entity[sound]');
+
+    // Start AR system when scene starts rendering
+    sceneEl.addEventListener('loaded', () => {
+      arSystem?.start();
+    });
+
+    // Handle target detection events
+    sceneEl.addEventListener('targetFound', () => {
+      
+
+      entity?.components.sound?.playSound();
+    });
+
+    sceneEl.addEventListener('targetLost', () => {
+      entity?.components.sound?.pause();
+    });
+
+    return () => {
+      arSystem.stop();
+      entity?.components.sound.pause();
+    }
+  }, []);
+
+      return (
+        <a-entity
+          ref={sceneRef}
+          mindar-image-target={`targetIndex: ${0}`}
+        >
+          <a-plane
+            position="0 0 0"
+            height="0.5"
+            width="0.5"
+            material="color: blue; opacity: 0.5"
+          />
+          <a-sound
+            src={`src: url(${soundUrl})`}
+            autoplay="false"
+            loop="true"
+            position="0 0 0"
+          />
+        </a-entity>
+      );
+    };
+
+    export default PhotoAR

@@ -1,12 +1,44 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useLocation } from 'react-router-dom';
 import MindARViewer from '../../widgets/mindar-viewer';
 
+import { categoryTopicsList } from "../../utils/db";
 
 const TopicItem = () => {
     const location = useLocation();
-    const { topic, children } = location.state || {};
+    const { topic } = location.state || {};
     const [started, setStarted] = useState(null);
+    const [childrenItems, setChildrenItems] = useState([]);
+
+    
+  useEffect(() => {    
+     if (categoryTopicsList.length > 0) {
+        const AR_children = [];
+
+        categoryTopicsList.map(item => {
+            item.topicItems.map(topicItem => {
+                if (topicItem.parentTopic === topic) {
+                    AR_children.push(topicItem);
+                    return topicItem;
+                }
+                return AR_children
+            }
+          )});
+        
+          
+        if (AR_children.length > 0) {
+            setChildrenItems(AR_children);
+        }
+     }
+    }, [categoryTopicsList]);
+
+    useEffect(() => {
+      setStarted('aframe');
+
+      return () => {
+        setStarted(null);
+      }
+    }, [])
 
     return (
         <>
@@ -19,7 +51,7 @@ const TopicItem = () => {
 
       {started === 'aframe' && (
         <div className="container">
-          <MindARViewer/>
+          <MindARViewer children_AR_list={childrenItems}/>
         </div>
       )}
 

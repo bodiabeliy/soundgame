@@ -2,7 +2,7 @@ export const Warning = (props) => {
   const { fill } = props;
   return (
     <svg
-      class="shrink-0 inline w-4 h-4 me-3"
+      class="shrink-0 inline w-4 h-4 me-3 mb-[250px]"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill={fill}

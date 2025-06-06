@@ -6,7 +6,8 @@ import AppRouter from './utils/routes/index.jsx';
 function App() {
 
   return (
-    <div className="App bg-green">      
+    <div className="App bg-green"> 
+   
         <div className=" lg:w-[1300px] lg:flex lg:justify-center flex-col m-auto">
          <AppRouter />
       </div>

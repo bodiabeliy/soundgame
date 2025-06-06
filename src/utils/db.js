@@ -1,15 +1,49 @@
 
 export const categoryTopicsList =[
     {
-        image:"https://m.media-amazon.com/images/I/81I+WcOpzGL._SL1500_.jpg",
+        image:`${process.env.REACT_APP_BASE_URL}/wild%20nature/topicImage.jpg`,
+
         topicName:"Дика природа",
 
-        actionButtonText: "View",
         topicItems:[
             {
-                image:"",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            }
+                parentTopic: "Дика природа",
+                itemName: "Жаба",
+                imageTarget:`${process.env.REACT_APP_BASE_URL}/wild%20nature/frog/frog.mind`,
+                imagePhoto:`${process.env.REACT_APP_BASE_URL}/wild%20nature/frog/frog.png`,
+                audio: `${process.env.REACT_APP_BASE_URL}/wild%20nature/frog/frog.mp3`,
+            },
+            {
+                parentTopic: "Дика природа",
+                itemName: "Орел",
+                imageTarget:`${process.env.REACT_APP_BASE_URL}/wild%20nature/eagle/eagle.mind`,
+                imagePhoto:`${process.env.REACT_APP_BASE_URL}/wild%20nature/eagle/eagle.png`,
+                audio: `${process.env.REACT_APP_BASE_URL}/wild%20nature/eagle/eagle.mp3`,
+            },
+            {
+                parentTopic: "Дика природа",
+                itemName: "Змія",
+                imageTarget:`${process.env.REACT_APP_BASE_URL}/wild%20nature/snake/snake.mind`,
+                imagePhoto:`${process.env.REACT_APP_BASE_URL}/wild%20nature/snake/snake.png`,
+                audio: `${process.env.REACT_APP_BASE_URL}/wild%20nature/snake/snake.mp3`,
+            },
+            {
+                parentTopic: "Дика природа",
+                itemName: "Лев",
+                imagePhoto:`${process.env.REACT_APP_BASE_URL}/wild%20nature/lion/lion.png`,
+                audio: `${process.env.REACT_APP_BASE_URL}/wild%20nature/lion/lion.mp3`,
+            },
+            {
+                parentTopic: "Дика природа",
+                itemName: "Сова",
+                imageTarget:`${process.env.REACT_APP_BASE_URL}/wild%20nature/owl/owl.mind`,
+                imagePhoto:`${process.env.REACT_APP_BASE_URL}/wild%20nature/owl/owl.png`,
+                audio: `${process.env.REACT_APP_BASE_URL}/wild%20nature/owl/owl.mp3`,
+            },
+             
+            
+            
+            
         ]
     },
     {
