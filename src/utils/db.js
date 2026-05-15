@@ -1,6 +1,41 @@
 
 export const categoryTopicsList =[
+     {
+        isActive: true,
+        image:`https://soundgame-server.onrender.com/birds/topicImage.png`,
+        imageTemplate:`https://soundgame-server.onrender.com/birds/birds.mind`,
+        userExample:`https://soundgame-server.onrender.com/birds/birds_template.png`,
+        topicName:"Пташки",
+        topicItems:[
+            {
+                parentTopic: "Пташки",
+                itemName: "sparrow",
+                targetIndex: 0,
+                audio: `https://soundgame-server.onrender.com/birds/sparrow/sparrow.mp3`,
+            },
+            {
+                parentTopic: "Пташки",
+                itemName: "raven",
+                targetIndex: 1,
+                audio: `https://soundgame-server.onrender.com/birds/raven/raven.mp3`,
+            },
+            {
+                parentTopic: "Пташки",
+                itemName: "magpie",
+                targetIndex: 2,
+                audio: `https://soundgame-server.onrender.com/birds/magpie/magpie.wav`,
+            },
+            {
+                parentTopic: "Пташки",
+                itemName: "dove",
+                targetIndex: 3,
+                audio: `https://soundgame-server.onrender.com/birds/dove/dove.mp3`,
+            }
+          
+        ]
+    },
     {
+        isActive: true,
         image:`https://soundgame-server.onrender.com/wild%20nature/topicImage.jpg`,
         imageTemplate:`https://soundgame-server.onrender.com/wild%20nature/wild_nature.mind`,
         userExample:`https://soundgame-server.onrender.com/wild%20nature/animals_template.png`,
@@ -35,14 +70,12 @@ export const categoryTopicsList =[
                 itemName: "owl",
                 targetIndex: 4,
                 audio: `https://soundgame-server.onrender.com/wild%20nature/owl/owl.mp3`,
-            },
-             
-            
-            
+            }, 
             
         ]
     },
     {
+        isActive: false,
         image:`https://soundgame-server.onrender.com/tools/toolsTopic.png`,
         imageTemplate:`https://soundgame-server.onrender.com/tools/tools.mind`,
         userExample:`https://soundgame-server.onrender.com/tools/toolsTopic.png`,
@@ -69,7 +102,7 @@ export const categoryTopicsList =[
           
         ]
     },
-    {
+       {
         image:"",
         imageTemplate:``,
         userExample:``,

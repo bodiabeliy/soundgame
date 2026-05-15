@@ -32,10 +32,10 @@ const CategoriesTopicsList = () => {
       </p>
 
       <ul className="max-w-md divide-y divide-gray-200 ring-2 ring-yellow-lime">
-        {categoryTopicsList.map((categotyTopic) => {
+        {categoryTopicsList.map((categotyTopic) => {          
           return (
             <div key={categotyTopic.topicName}>
-              <Accordion className="text-3xl font-bold" disabled={categotyTopic.topicItems.length === 0}>
+              <Accordion className="text-3xl font-bold" disabled={!categotyTopic.isActive}>
                 <AccordionSummary
                   className=""
                   expandIcon={<IconArrowCard fill="white" />}
@@ -95,13 +95,13 @@ const CategoriesTopicsList = () => {
                     </div>
                   </div>
                   <div className="flex items-center justify-center space-x-4 rtl:space-x-reverse mb-2">
-                    <button
+                    {/* <button
                       type="button"
                       className="text-white bg-pink hover:bg-hovered-pink font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 me-2 mt-2"
                     >
                       <FileDownloadIcon />
                       Завантажити
-                    </button>
+                    </button> */}
                     <button
                       type="button"
                       className="text-white bg-purpure hover:bg-hovered-purpure font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mt-2"
