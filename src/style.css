@@ -9,10 +9,10 @@
 video {
   position: absolute;
   width: 100vw !important;
-  height: calc(100vh - 50px) !important;
+  height: calc(100vh - 40px) !important;
   object-fit: cover !important;
 
-  top: 50px !important;
+  top: 40px !important;
 
 
 }

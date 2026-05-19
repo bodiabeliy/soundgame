@@ -12,24 +12,28 @@ export const categoryTopicsList =[
                 itemName: "sparrow",
                 targetIndex: 0,
                 audio: `https://soundgame-server.onrender.com/birds/sparrow/sparrow.mp3`,
+                model:"https://soundgame-server.onrender.com/birds/sparrow/sparrow.glb"
             },
             {
                 parentTopic: "Пташки",
                 itemName: "raven",
                 targetIndex: 1,
                 audio: `https://soundgame-server.onrender.com/birds/raven/raven.mp3`,
+                model:"https://soundgame-server.onrender.com/birds/raven/raven.glb"
             },
             {
                 parentTopic: "Пташки",
                 itemName: "magpie",
                 targetIndex: 2,
                 audio: `https://soundgame-server.onrender.com/birds/magpie/magpie.wav`,
+                model:"https://soundgame-server.onrender.com/birds/magpie/magpie.glb"
             },
             {
                 parentTopic: "Пташки",
                 itemName: "dove",
                 targetIndex: 3,
                 audio: `https://soundgame-server.onrender.com/birds/dove/dove.mp3`,
+                model:"https://soundgame-server.onrender.com/birds/dove/dove.glb"
             }
           
         ]

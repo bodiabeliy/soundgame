@@ -40,7 +40,6 @@ const TopicItem = () => {
 
     useEffect(() => {
       setStarted('aframe');
-
       return () => {
         setStarted(null);
       }
@@ -48,15 +47,15 @@ const TopicItem = () => {
 
     return (
         <>
-        <h1>Topic Page <b>{topic}</b></h1>
+        <h1 style={{padding:"10px"}}>Topic Page <b>{topic}</b></h1>
         <div className="control-buttons">
         {started === null && <button onClick={() => {setStarted('aframe')}}>Start AFRAME version</button>}
         {/* {started === null && <button onClick={() => {setStarted('three')}}>Start ThreeJS version</button>} */}
-        {started !== null && <button onClick={() => {setStarted(null)}}>Stop</button>}
+        {/* {started !== null && <button onClick={() => {setStarted(null)}}>Stop</button>} */}
       </div>
 
       {started === 'aframe' && (
-        <div className="container">
+        <div>
           <MindARViewer children_AR_list={childrenItems} imageTargetTemplate={imageTemplate}/>
         </div>
       )}
